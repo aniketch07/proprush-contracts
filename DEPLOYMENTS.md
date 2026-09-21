@@ -18,15 +18,15 @@ Explorer:
 | Setting | Value |
 |---|---|
 | settlement token (`usdc`) | `0x6482c263a6F3f651Ab292443DC60B378482E5e17` (MockUSDC) |
-| `keeper` (game server) | `0xCaE1F9b142908090aE806ae344C4A3a9c31ae69D` |
+| `keeper` (game server) | `0x4bBB84BB9f8BEf8BDac28c2607856ad10fC482f8` (dedicated keeper wallet) |
 | `treasury` (5% fees) | `0xCaE1F9b142908090aE806ae344C4A3a9c31ae69D` |
 | `resolver` (disputes) | `0xCaE1F9b142908090aE806ae344C4A3a9c31ae69D` |
 | `disputeWindow` | 600s (10 min) |
 | `lobbyTimeout` | 3600s (1 hour) |
 | `matchTimeout` | 86400s (24 hours) |
 
-> ⚠️ All three roles currently point at the deployer address (fine for testing).
-> Point `keeper` and `resolver` at the real server/multisig before any real play.
+> `keeper` is a **dedicated wallet** (holds only `proposeResult` power — no owner rights).
+> `treasury` + `resolver` still point at the deployer; separate these before real play.
 
 ### ABIs (for the frontend)
 

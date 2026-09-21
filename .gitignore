@@ -6,3 +6,4 @@ broadcast/
 # secrets
 .env
 .wallet-address
+.keeper-wallet
