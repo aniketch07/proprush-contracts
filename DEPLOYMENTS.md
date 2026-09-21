@@ -65,3 +65,18 @@ Players then:
 ```bash
 forge script script/Deploy.s.sol --rpc-url base_sepolia --broadcast
 ```
+
+## Verification
+
+Both contracts are **verified** — source code is public and matches the deployed bytecode.
+
+| Contract | Basescan | Sourcify |
+|---|---|---|
+| WagerPoolFactory | ✅ Verified | ✅ full match |
+| MockUSDC | ✅ Verified | ✅ full match |
+
+```bash
+# re-verify (needs BASESCAN_API_KEY in .env)
+forge verify-contract <address> src/<Contract>.sol:<Contract> \
+  --chain base-sepolia --etherscan-api-key $BASESCAN_API_KEY
+```
